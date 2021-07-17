@@ -14,7 +14,7 @@ public class Work02 {
     public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
         System.out.println("请输入一个文件名：");
-        String s = sc.nextLine().trim();  //去除两边的空白
+        String s = sc.nextLine();
         String b = ".txt";
         String s1 = s.substring(0,s.indexOf(b));  //截取前面的名字，用于后面创建副本
         File file = new File(s);
@@ -33,6 +33,5 @@ public class Work02 {
             file.createNewFile();   //当文件不存在，跳出循环，然后创建新文件副本
         }
         System.out.println("创建文件的名字："+file.getName());
-        sc.close();
     }
 }
